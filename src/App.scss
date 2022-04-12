@@ -1,0 +1,164 @@
+$colors:(
+        'White': rgb(255,255,255),
+        'Pink': rgb(236,64,122),
+        'Purple': rgb(171,71,188),
+        'DeepPurple': rgb(126,87,194),
+        'Indigo': rgb(92,107,192),
+        'Blue': rgb(66,165,245),
+        'LightBlue': rgb(41,182,246),
+        'Cyan': rgb(38,198,218),
+        'Teal': rgb(38,166,154),
+        'Green': rgb(102,187,106),
+        'lightGreen': rgb(156,204,101),
+        'Lime': rgb(212,225,87),
+        'Yellow': rgb(255,238,88),
+        'Amber': rgb(255,202,40),
+        'Orange': rgb(255,167,38),
+        'DeepOrange': rgb(255,112,67)
+);
+$borderColor: rgb(214, 215, 218);
+$littleNumColor: rgb(156, 156, 156);
+$modifyColor: rgb(28, 84, 166);
+$notModifyColor: rgb(45, 47, 47);
+$lightBlue: rgb(213, 234, 255);
+$deepBlue: rgb(154, 229, 255);
+$curBg: rgb(255, 246, 182);
+$falseColor: rgb(255, 190, 190);
+$border: 1px solid $borderColor;
+$boxShadow: 0 6px 8px 0 rgba(0,0,0,0.3), 0 10px 20px 0 rgba(0,0,0,0.3);
+
+@each $colorKey, $color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+.false-bg {
+  background-color: $falseColor !important;
+}
+
+.active-bg {
+  background-color: $lightBlue;
+}
+
+.check-bg {
+  background-color: $deepBlue;
+}
+
+.active-cur-bg {
+  background-color: $curBg;
+}
+
+.active-num {
+  color: $modifyColor !important;
+}
+
+#all {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  user-select: none;
+}
+
+// 更新数字
+.input-group, .input-none{
+  height: 360px;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-right: $border;
+  user-select: none;
+  cursor: pointer;
+
+  .input-num {
+    height: 99px;
+    width: 99px;
+    border-top: $border;
+    border-left: $border;
+    text-align: center;
+    line-height: 99px;
+    font-size: 25px;
+  }
+
+}
+.input-none {
+  border: $border;
+  font-size: 144px;
+  line-height: 360px;
+}
+
+#sudoku {
+  height: 820px;
+  width: 820px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.t {
+  border-top: 1px solid;
+}
+
+.r {
+  border-right: 1px solid;
+}
+
+.b {
+  border-bottom: 1px solid;
+}
+
+.l {
+  border-left: 1px solid;
+}
+
+.out {
+  width: 272px;
+  height: 272px;
+  border-color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-color: $borderColor;
+}
+
+.false, .true{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: $littleNumColor;
+  font-weight: 700;
+}
+
+.false {
+  visibility: hidden;
+}
+
+.canModify, .canNotModify{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 72px;
+  line-height: 91px;
+}
+
+.canModify {
+  color: $modifyColor
+}
+
+.canNotModify {
+  color: $notModifyColor
+}
