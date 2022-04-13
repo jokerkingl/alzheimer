@@ -17,148 +17,21 @@ $colors:(
         'DeepOrange': rgb(255,112,67)
 );
 $borderColor: rgb(214, 215, 218);
-$littleNumColor: rgb(156, 156, 156);
-$modifyColor: rgb(28, 84, 166);
-$notModifyColor: rgb(45, 47, 47);
-$lightBlue: rgb(213, 234, 255);
-$deepBlue: rgb(154, 229, 255);
-$curBg: rgb(255, 246, 182);
-$falseColor: rgb(255, 190, 190);
+$fontColor: rgb(156, 156, 156);
 $border: 1px solid $borderColor;
 $boxShadow: 0 6px 8px 0 rgba(0,0,0,0.3), 0 10px 20px 0 rgba(0,0,0,0.3);
 
 @each $colorKey, $color in $colors {
   .text-#{$colorKey} {
-    color: $color;
+    color: $color !important;
   }
   .bg-#{$colorKey} {
     background-color: $color;
   }
 }
-.false-bg {
-  background-color: $falseColor !important;
-}
-
-.active-bg {
-  background-color: $lightBlue;
-}
-
-.check-bg {
-  background-color: $deepBlue;
-}
-
-.active-cur-bg {
-  background-color: $curBg;
-}
-
-.active-num {
-  color: $modifyColor !important;
-}
 
 #all {
-  width: 80%;
+  width: 80vw;
   height: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  user-select: none;
-}
-
-// 更新数字
-.input-group, .input-none{
-  height: 360px;
-  width: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-right: $border;
-  user-select: none;
-  cursor: pointer;
-
-  .input-num {
-    height: 99px;
-    width: 99px;
-    border-top: $border;
-    border-left: $border;
-    text-align: center;
-    line-height: 99px;
-    font-size: 25px;
-  }
-
-}
-.input-none {
-  border: $border;
-  font-size: 144px;
-  line-height: 360px;
-}
-
-#sudoku {
-  height: 820px;
-  width: 820px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.t {
-  border-top: 1px solid;
-}
-
-.r {
-  border-right: 1px solid;
-}
-
-.b {
-  border-bottom: 1px solid;
-}
-
-.l {
-  border-left: 1px solid;
-}
-
-.out {
-  width: 272px;
-  height: 272px;
-  border-color: black;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.inner {
-  width: 90px;
-  height: 90px;
-  cursor: pointer;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-color: $borderColor;
-}
-
-.false, .true{
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  color: $littleNumColor;
-  font-weight: 700;
-}
-
-.false {
-  visibility: hidden;
-}
-
-.canModify, .canNotModify{
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 72px;
-  line-height: 91px;
-}
-
-.canModify {
-  color: $modifyColor
-}
-
-.canNotModify {
-  color: $notModifyColor
 }

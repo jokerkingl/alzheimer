@@ -1,6 +1,6 @@
 import React from "react"
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Home from "./pages/home"
+import Admin from "./pages/admin"
 import './App.scss'
 
 const App = ()=>{
@@ -8,7 +8,7 @@ const App = ()=>{
         <div id={'all'}>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/*" element={<Admin />} />
                 </Routes>
             </BrowserRouter>
         </div>

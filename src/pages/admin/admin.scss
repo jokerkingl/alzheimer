@@ -1,0 +1,56 @@
+@import "../../App";
+
+#top-nav {
+  width: 80%;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  user-select: none;
+
+  .logo {
+    width: 15%;
+    border: $border;
+  }
+
+  .nav-group {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-button {
+      color: $fontColor;
+      cursor: pointer;
+    }
+
+    .nav-button:hover {
+      color: rgb(236,64,122);
+    }
+  }
+
+  .search {
+    width: 15%;
+    display: flex;
+    align-items: center;
+
+    input {
+      border: $border;
+      padding: .3rem .4rem;
+      width: 60%;
+      border-radius: .5rem;
+    }
+
+    input:focus{
+      border-color: #66afe9;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+    }
+
+    .search-img {
+      cursor: pointer;
+      padding: .5rem;
+    }
+  }
+}
