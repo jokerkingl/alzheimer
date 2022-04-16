@@ -1,7 +1,11 @@
 @import "../../App";
 
+#all {
+  margin: 0 auto;
+}
+
 #top-nav {
-  width: 80%;
+  width: 80vw;
   height: 6vh;
   display: flex;
   justify-content: space-between;
@@ -53,4 +57,9 @@
       padding: .5rem;
     }
   }
+}
+
+#main {
+  width: 80vw;
+  margin: 0 auto;
 }

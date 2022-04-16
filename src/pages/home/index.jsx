@@ -1,9 +1,7 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import './home.scss'
 
 const Home = ()=>{
-    const searchInput = useRef('')
-
     return (
         <div id={'home'}>
             <div className={'top'}>

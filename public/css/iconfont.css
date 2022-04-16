@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 1892215 */
-  src: url('//at.alicdn.com/t/font_1892215_qx4yx00u5og.woff2?t=1649834301247') format('woff2'),
-  url('//at.alicdn.com/t/font_1892215_qx4yx00u5og.woff?t=1649834301247') format('woff'),
-  url('//at.alicdn.com/t/font_1892215_qx4yx00u5og.ttf?t=1649834301247') format('truetype');
+  src: url('//at.alicdn.com/t/font_1892215_sa25c396c8h.woff2?t=1650074904146') format('woff2'),
+  url('//at.alicdn.com/t/font_1892215_sa25c396c8h.woff?t=1650074904146') format('woff'),
+  url('//at.alicdn.com/t/font_1892215_sa25c396c8h.ttf?t=1650074904146') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,22 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+  content: "\e7ae";
+}
+
+.icon-password:before {
+  content: "\e75b";
+}
+
+.icon-email:before {
+  content: "\e66f";
+}
+
+.icon-code:before {
+  content: "\e832";
 }
 
 .icon-wechat:before {

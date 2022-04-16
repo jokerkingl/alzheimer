@@ -22,7 +22,7 @@ const Admin = ()=>{
     }
 
     return (
-        <>
+        <div id={'all'}>
             <div id={'top-nav'}>
                 <div className={'logo'} />
                 <div className={'nav-group'}>
@@ -44,7 +44,7 @@ const Admin = ()=>{
                     <div className={'iconfont icon-search search-img'} />
                 </div>
             </div>
-            <>
+            <div id={'main'}>
                 <Routes>
                     <Route path={'about'} element={<About />} />
                     <Route path={'test'} element={<Test />} />
@@ -54,8 +54,8 @@ const Admin = ()=>{
                     <Route path={''} element={<Home />} />
                     <Route path={'*'} element={<Navigate to={'/'} />} />
                 </Routes>
-            </>
-        </>
+            </div>
+        </div>
     )
 }
 
