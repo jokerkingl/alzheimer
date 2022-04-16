@@ -9,11 +9,13 @@ const Login = ()=>{
     return (
         <div id={'login'}>
             <div className={'header'}>
+                {/*这个logo里面可以加一个logo图片*/}
                 <div className={'logo'} />
             </div>
+            {/*这里背景图片最好更换一张*/}
             <div className={'bg'} />
             <div id={'login-register'}>
-                <h4>邮箱账号登录</h4>
+                <h4>{loginOrRegister?'邮箱账号登录':'邮箱账号注册'}</h4>
                <div className={'input-box'} >
                     <div className={'iconfont icon-email'} />
                     <input type={'email'} className={'input'} placeholder={'邮箱账号'}/>
